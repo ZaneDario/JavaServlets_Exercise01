@@ -31,7 +31,7 @@
             <select id="location" name="location">
                 <% for(Location loc : locations )
                     { %>
-                        <option value="volvo"> <%= loc.getName() %> </option>
+                        <option value="<%=loc.getName() %>"> <%= loc.getName() %> </option>
                  <% } %>    
             </select>
             <label for="brand">  Old Location: <%= e.getLocation() %> </label>

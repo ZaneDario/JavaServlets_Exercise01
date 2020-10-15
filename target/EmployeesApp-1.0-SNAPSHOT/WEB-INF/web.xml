@@ -4,6 +4,8 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    
+    
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.LoginServlet</servlet-class>
@@ -12,6 +14,8 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    
+    
     <servlet>
         <servlet-name>ListEmployeesServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.employees.ListEmployeesServlet</servlet-class>
@@ -36,6 +40,36 @@
         <servlet-name>DeleteEmployeeServlet</servlet-name>
         <url-pattern>/deleteEmployee</url-pattern>
     </servlet-mapping>
+    
+    
+    
+    <servlet>
+        <servlet-name>ListLocationsServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.locations.ListLocationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListLocationsServlet</servlet-name>
+        <url-pattern>/listLocations</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditLocationServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.locations.EditLocationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditLocationServlet</servlet-name>
+        <url-pattern>/editLocation</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteLocationServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.locations.DeleteLocationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteLocationServlet</servlet-name>
+        <url-pattern>/deleteLocation</url-pattern>
+    </servlet-mapping>
+    
+    
+    
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.LogoutServlet</servlet-class>
