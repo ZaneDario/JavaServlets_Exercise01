@@ -32,4 +32,8 @@ public class LocationService{
     {
         dao.removeLocation(id);
     }
+
+    public void addLocation(Location location) {
+        dao.addLocation(location.getName());
+    }
 }

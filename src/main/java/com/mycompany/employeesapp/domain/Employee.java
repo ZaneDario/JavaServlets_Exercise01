@@ -18,6 +18,14 @@ public class Employee {
         
         this.location = Conversor.parseIntToString(locationId);
     }
+    
+    public Employee(String name, int locationId, float salary) {
+        this.name = name;
+        this.locationId = locationId;
+        this.salary = salary;
+        
+        this.location = Conversor.parseIntToString(locationId);
+    }
 
     public int getId() {
         return id;

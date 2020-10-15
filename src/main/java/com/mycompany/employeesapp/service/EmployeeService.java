@@ -25,6 +25,11 @@ public class EmployeeService {
         }
     }
     
+    public void addEmployee(Employee employee)
+    {
+        dao.addEmployee(employee);
+    }
+    
      public List<Employee> getEmployees()
     {
         return dao.getEmployees();

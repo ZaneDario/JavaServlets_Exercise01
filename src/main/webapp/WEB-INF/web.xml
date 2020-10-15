@@ -15,7 +15,14 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
     
-    
+    <servlet>
+        <servlet-name>AddEmployeesServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.AddEmployeesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployeesServlet</servlet-name>
+        <url-pattern>/addEmployee</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ListEmployeesServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.employees.ListEmployeesServlet</servlet-class>
@@ -42,7 +49,14 @@
     </servlet-mapping>
     
     
-    
+    <servlet>
+        <servlet-name>AddLocationsServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.locations.AddLocationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddLocationsServlet</servlet-name>
+        <url-pattern>/addLocation</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ListLocationsServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.locations.ListLocationsServlet</servlet-class>

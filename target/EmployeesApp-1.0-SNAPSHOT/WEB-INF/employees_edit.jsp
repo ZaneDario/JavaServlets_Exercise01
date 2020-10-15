@@ -37,7 +37,7 @@
             <label for="brand">  Old Location: <%= e.getLocation() %> </label>
             <br>
             <label for="model">New Salary: </label>
-            <input type="number" id="salary" name="salary">
+            <input type="text" id="salary" name="salary">
             <label for="brand">  Old Salary: <%= e.getSalary() %> </label>
             <br>
             <input type="submit" value="EDIT"> 

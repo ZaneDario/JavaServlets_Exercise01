@@ -1,6 +1,7 @@
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\domain\Employee.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\locations\DeleteLocationServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\service\UserService.java
+C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\employees\AddEmployeeServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\constants\ServiceType.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\LocationDAO.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\service\EmployeeService.java
@@ -18,4 +19,5 @@ C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\co
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\DAO.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\locations\EditLocationServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\EmployeeDAO.java
+C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\locations\AddLocationServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\LogoutServlet.java

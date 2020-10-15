@@ -22,6 +22,19 @@ public class EmployeeDAO extends DAO{
         super(userName, password, serverName, portNumber, database);
     }
     
+    public void addEmployee(Employee e) {
+        String query = "INSERT INTO employees (name, location, salary) values (?, ?, ?)";
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, e.getName());
+            preparedStatement.setInt(2, e.getLocationId());
+            preparedStatement.setFloat(3, e.getSalary());
+            preparedStatement.execute();
+        } catch (SQLException exc) {
+            System.out.println("ERROR: " + exc.toString());
+        }
+    }
+    
     public List<Employee> getEmployees()
     {
         List<Employee> employees = new ArrayList<>();
