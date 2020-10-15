@@ -6,6 +6,7 @@ import com.mycompany.employeesapp.domain.Location;
 import com.mycompany.employeesapp.service.EmployeeService;
 import com.mycompany.employeesapp.service.LocationService;
 import com.mycompany.employeesapp.service.UserService;
+import com.mycompany.employeesapp.utils.Conversor;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
@@ -27,7 +28,7 @@ public class EditEmployeeServlet extends HttpServlet{
         String name = request.getParameter("name");
         String location = request.getParameter("location");
         String salary = request.getParameter("salary");
-        service.editEmployee(id, name, Integer.parseInt(location), Float.parseFloat(salary));
+        service.editEmployee(id, name, Conversor.parseStringToInt(location), Float.parseFloat(salary));
 
         response.sendRedirect("http://localhost:8080/EmployeesApp/listEmployees");
     }

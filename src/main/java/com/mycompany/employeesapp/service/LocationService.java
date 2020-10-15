@@ -25,6 +25,6 @@ public class LocationService{
     }
 
     public void editLocation(int id, String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        dao.editLocation(id, name);
     }
 }
