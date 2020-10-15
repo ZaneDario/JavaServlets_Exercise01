@@ -1,7 +1,13 @@
-
-package com.mycompany.employeesapp.servlets;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.employeesapp.servlets.employees;
 
 import com.mycompany.employeesapp.domain.Employee;
+import com.mycompany.employeesapp.domain.User;
+import com.mycompany.employeesapp.service.EmployeeService;
 import com.mycompany.employeesapp.service.UserService;
 import java.io.IOException;
 import java.util.List;
@@ -12,7 +18,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class DeleteEmployeeServlet extends HttpServlet{
+/**
+ *
+ * @author dario
+ */
+public class ListEmployeesServlet extends HttpServlet{
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -20,13 +31,12 @@ public class DeleteEmployeeServlet extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        UserService service = new UserService();
         
-        String idString = req.getParameter("id");
-        int id = Integer.parseInt(idString);
+        EmployeeService service = new EmployeeService();
+        List<Employee> employees = service.getEmployees();
         
-        service.removeEmployee(id);
+        HttpSession mySession = req.getSession(true);
+        mySession.setAttribute("employees", employees);
         
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/employees_list.jsp");
         rd.forward(req, resp);

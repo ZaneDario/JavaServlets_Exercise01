@@ -10,6 +10,7 @@
     }%>
     <h2>Hello, <%= name %>! </h2>
     <text><a href="http://localhost:8080/EmployeesApp/logout">Logout</a></text>
+    <text><a href="http://localhost:8080/EmployeesApp/locationsList">Locations List</a></text>
 
 
                 

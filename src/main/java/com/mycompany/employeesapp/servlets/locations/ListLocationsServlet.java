@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.employeesapp.servlets;
+package com.mycompany.employeesapp.servlets.locations;
 
 import com.mycompany.employeesapp.domain.Employee;
-import com.mycompany.employeesapp.domain.User;
+import com.mycompany.employeesapp.domain.Location;
+import com.mycompany.employeesapp.service.LocationService;
 import com.mycompany.employeesapp.service.UserService;
 import java.io.IOException;
 import java.util.List;
@@ -21,7 +22,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author dario
  */
-public class ListEmployeesServlet extends HttpServlet{
+public class ListLocationsServlet extends HttpServlet{
    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,13 +32,13 @@ public class ListEmployeesServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        UserService service = new UserService();
-        List<Employee> employees = service.getEmployees();
+        LocationService service = new LocationService();
+        List<Location> locations = service.getLocations();
         
         HttpSession mySession = req.getSession(true);
-        mySession.setAttribute("employees", employees);
+        mySession.setAttribute("locations", locations);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/employees_list.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/locations_list.jsp");
         rd.forward(req, resp);
     }
 }

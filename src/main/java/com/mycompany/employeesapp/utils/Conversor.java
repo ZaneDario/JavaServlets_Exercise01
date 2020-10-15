@@ -1,14 +1,14 @@
 package com.mycompany.employeesapp.utils;
 
 import com.mycompany.employeesapp.domain.Location;
-import com.mycompany.employeesapp.service.UserService;
+import com.mycompany.employeesapp.service.LocationService;
 import java.util.List;
 
 public class Conversor {
     
     public static String parseIntToString(int id)
     {
-        UserService service= new UserService();
+        LocationService service= new LocationService();
         List<Location> locations = service.getLocations();
         for(Location loc : locations)
         {
@@ -21,7 +21,7 @@ public class Conversor {
     
     public static int parseStringToInt(String location)
     {
-        UserService service= new UserService();
+        LocationService service= new LocationService();
         List<Location> locations = service.getLocations();
         for(Location loc : locations)
         {

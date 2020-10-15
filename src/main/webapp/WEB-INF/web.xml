@@ -4,7 +4,6 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
-    
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.LoginServlet</servlet-class>
@@ -13,10 +12,9 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ListEmployeesServlet</servlet-name>
-        <servlet-class>com.mycompany.employeesapp.servlets.ListEmployeesServlet</servlet-class>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.ListEmployeesServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ListEmployeesServlet</servlet-name>
@@ -24,7 +22,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>EditEmployeeServlet</servlet-name>
-        <servlet-class>com.mycompany.employeesapp.servlets.EditEmployeeServlet</servlet-class>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.EditEmployeeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>EditEmployeeServlet</servlet-name>
@@ -32,13 +30,12 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteEmployeeServlet</servlet-name>
-        <servlet-class>com.mycompany.employeesapp.servlets.DeleteEmployeeServlet</servlet-class>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.DeleteEmployeeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteEmployeeServlet</servlet-name>
         <url-pattern>/deleteEmployee</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.LogoutServlet</servlet-class>
@@ -47,7 +44,6 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
-    
     <session-config>
         <session-timeout>
             30

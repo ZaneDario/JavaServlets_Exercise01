@@ -5,9 +5,9 @@
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location"%>
 <%@page import="com.mycompany.employeesapp.utils.Conversor"%>
 <%@page import="com.mycompany.employeesapp.domain.Employee"%>
+<%@page import="com.mycompany.employeesapp.domain.Location"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,19 +25,20 @@
         <form action="/EmployeesApp/editEmployee" method="post">
             <label for="brand">New Name: </label>
             <input type="text" id="name" name="name">
-            <label for="brand">Old Name: <%= e.getName() %> </label>
+            <label for="brand">  Old Name: <%= e.getName() %> </label>
             <br>
             <label for="model">New Location: </label>
             <select id="location" name="location">
-                <% for(Location loc : locations) { %>
-                <option value="volvo"> <%= loc %> </option>
-                <% } %>
+                <% for(Location loc : locations )
+                    { %>
+                        <option value="volvo"> <%= loc.getName() %> </option>
+                 <% } %>    
             </select>
-            <label for="brand">Old Location: <%= e.getLocation() %> </label>
+            <label for="brand">  Old Location: <%= e.getLocation() %> </label>
             <br>
             <label for="model">New Salary: </label>
             <input type="number" id="salary" name="salary">
-            <label for="brand">Old Salary: <%= e.getSalary() %> </label>
+            <label for="brand">  Old Salary: <%= e.getSalary() %> </label>
             <br>
             <input type="submit" value="EDIT"> 
         </form>
