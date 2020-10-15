@@ -78,5 +78,7 @@
             <input type="text" id="value" name="value">
             <input type="submit" value="FILTER">  
         </form>
+        <br>
+        <text><a href="http://localhost:8080/EmployeesApp/listEmployees"> Reset   </a></text>
     </body>
 </html>
