@@ -27,4 +27,9 @@ public class LocationService{
     public void editLocation(int id, String name) {
         dao.editLocation(id, name);
     }
+    
+    public void removeLocation(int id)
+    {
+        dao.removeLocation(id);
+    }
 }

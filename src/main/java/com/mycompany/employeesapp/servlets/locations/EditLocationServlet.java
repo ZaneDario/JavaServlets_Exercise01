@@ -5,12 +5,9 @@
  */
 package com.mycompany.employeesapp.servlets.locations;
 
-import com.mycompany.employeesapp.domain.Employee;
 import com.mycompany.employeesapp.domain.Location;
-import com.mycompany.employeesapp.service.EmployeeService;
 import com.mycompany.employeesapp.service.LocationService;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

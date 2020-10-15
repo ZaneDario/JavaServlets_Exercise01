@@ -5,9 +5,8 @@
  */
 package com.mycompany.employeesapp.servlets.locations;
 
-import com.mycompany.employeesapp.service.UserService;
+import com.mycompany.employeesapp.service.LocationService;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,14 +26,13 @@ public class DeleteLocationServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserService service = new UserService();
+        LocationService service = new LocationService();
         
         String idString = req.getParameter("id");
         int id = Integer.parseInt(idString);
         
-        //service.removeLocation(id);
+        service.removeLocation(id);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/locations_list.jsp");
-        rd.forward(req, resp);
+        resp.sendRedirect("http://localhost:8080/EmployeesApp/listLocations");
     }
 }
