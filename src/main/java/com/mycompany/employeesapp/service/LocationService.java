@@ -34,6 +34,6 @@ public class LocationService{
     }
 
     public void addLocation(Location location) {
-        dao.addLocation(location.getName());
+        dao.addLocation(location);
     }
 }

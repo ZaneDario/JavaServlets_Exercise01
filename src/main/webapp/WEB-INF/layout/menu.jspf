@@ -9,9 +9,8 @@
         name = user.getUsername();
     }%>
     <h2>Hello, <%= name %>! </h2>
-    <text><a href="http://localhost:8080/EmployeesApp/logout">Logout</a></text>
-    <text><a href="http://localhost:8080/EmployeesApp/listLocations">Locations List</a></text>
-
+    
+    <text><a href="http://localhost:8080/EmployeesApp/logout"> Logout   </a></text>
 
                 
 

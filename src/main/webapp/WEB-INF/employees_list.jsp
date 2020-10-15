@@ -18,21 +18,25 @@
         <div id="header">
             <%@ include file="/WEB-INF/layout/menu.jspf" %>
         </div>
-            <% List<Employee> employees = (List<Employee>)mySession.getAttribute("employees"); %>
-        
+        <text><a href="http://localhost:8080/EmployeesApp/listLocations"> Locations List   </a></text>
+        <% if(user.getRol().equals("admin")){ %>
+        <text><a href="http://localhost:8080/EmployeesApp/addEmployee"> Add Employee </a></text>
+        <% } %>
+        <% List<Employee> employees = (List<Employee>) mySession.getAttribute("employees"); %>
+
         <h1>List of Employees in the Company:</h1>
-        
+
         <table style="width:100%">
             <tr>
                 <td>ID</td>
                 <th>Name</th>
                 <th>Location ID</th>
                 <th>Salary</th>
-                <% if(user != null && user.getRol().equals("admin")) { %>
+                    <% if (user != null && user.getRol().equals("admin")) { %>
                 <th>Update</th>
                 <th>Delete</th>
-                <% } %>
-                
+                    <% } %>
+
             </tr>
 
 
@@ -40,23 +44,23 @@
             <tr>
                 <td style="text-align:center"><%= e.getId()%></td>
                 <td style="text-align:center"><%= e.getName()%></td> 
-                <td style="text-align:center"><%= e.getLocation() %></td>
+                <td style="text-align:center"><%= e.getLocation()%></td>
                 <td style="text-align:center"><%= e.getSalary()%></td>
-                <% if(user != null && user.getRol().equals("admin")) { %>
-                 <td style="text-align:center">
-                    <% String updateUrl = "http://localhost:8080/EmployeesApp/editEmployee?id=" + e.getId(); %>
-                    <a href=<%= updateUrl %>>
+                <% if (user != null && user.getRol().equals("admin")) { %>
+                <td style="text-align:center">
+                    <% String updateUrl = "http://localhost:8080/EmployeesApp/editEmployee?id=" + e.getId();%>
+                    <a href=<%= updateUrl%>>
                         <img height="25px" width="25px" src="/TecnaraWebApp/images/edit.png" alt="Edit this item from Database.">
                     </a>
                 </td>
-                 <td style="text-align:center">
-                    <% String deleteUrl = "http://localhost:8080/EmployeesApp/deleteEmployee?id=" + e.getId(); %>
-                    <a href=<%= deleteUrl %>>
+                <td style="text-align:center">
+                    <% String deleteUrl = "http://localhost:8080/EmployeesApp/deleteEmployee?id=" + e.getId();%>
+                    <a href=<%= deleteUrl%>>
                         <img height="25px" width="25px" src="/TecnaraWebApp/images/bin.png" alt="Delete this item from Database.">
                     </a>
                 </td>
                 <% } %>
-               
+
             </tr>
             <% }%>
 

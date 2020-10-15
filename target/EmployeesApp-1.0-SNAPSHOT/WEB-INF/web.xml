@@ -16,11 +16,11 @@
     </servlet-mapping>
     
     <servlet>
-        <servlet-name>AddEmployeesServlet</servlet-name>
-        <servlet-class>com.mycompany.employeesapp.servlets.employees.AddEmployeesServlet</servlet-class>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.AddEmployeeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddEmployeesServlet</servlet-name>
+        <servlet-name>AddEmployeeServlet</servlet-name>
         <url-pattern>/addEmployee</url-pattern>
     </servlet-mapping>
     <servlet>
@@ -50,11 +50,11 @@
     
     
     <servlet>
-        <servlet-name>AddLocationsServlet</servlet-name>
-        <servlet-class>com.mycompany.employeesapp.servlets.locations.AddLocationsServlet</servlet-class>
+        <servlet-name>AddLocationServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.locations.AddLocationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddLocationsServlet</servlet-name>
+        <servlet-name>AddLocationServlet</servlet-name>
         <url-pattern>/addLocation</url-pattern>
     </servlet-mapping>
     <servlet>

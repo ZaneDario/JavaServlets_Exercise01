@@ -17,15 +17,16 @@ public class LocationDAO extends DAO{
         super(userName, password, serverName, portNumber, database);
     }
     
-    public void addLocation(String name) {
+    public void addLocation(Location loc) {
         String query = "INSERT INTO locations (name) values (?)";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(query);
-            preparedStatement.setString(1, name);
+            preparedStatement.setString(1, loc.getName());
             preparedStatement.execute();
         } catch (SQLException e) {
             System.out.println("ERROR: " + e.toString());
         }
+        closeConnection();
     }
     
     public List<Location> getLocations()

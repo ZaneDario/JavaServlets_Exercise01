@@ -15,7 +15,7 @@ public class Location {
     }
 
     public Location(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       this.name = name;    
     }
 
     public int getId() {

@@ -21,12 +21,12 @@ public class AddEmployeeServlet extends HttpServlet {
         String location = request.getParameter("location");
         String salary = request.getParameter("salary");
         service.addEmployee(new Employee(name, Conversor.parseStringToInt(location), Float.parseFloat(salary)));
-        response.sendRedirect("http://localhost:8080/EmployeesApp/listLocations");
+        response.sendRedirect("http://localhost:8080/EmployeesApp/listEmployees");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/locations_add.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/employees_add.jsp");
         rd.forward(req, resp);
     }
 }
