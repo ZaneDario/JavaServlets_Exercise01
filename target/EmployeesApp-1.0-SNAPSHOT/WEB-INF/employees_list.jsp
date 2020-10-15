@@ -19,7 +19,7 @@
             <%@ include file="/WEB-INF/layout/menu.jspf" %>
         </div>
         <text><a href="http://localhost:8080/EmployeesApp/listLocations"> Locations List   </a></text>
-        <% if(user.getRol().equals("admin")){ %>
+        <% if (user.getRol().equals("admin")) { %>
         <text><a href="http://localhost:8080/EmployeesApp/addEmployee"> Add Employee </a></text>
         <% } %>
         <% List<Employee> employees = (List<Employee>) mySession.getAttribute("employees"); %>
@@ -63,7 +63,20 @@
 
             </tr>
             <% }%>
-
         </table>
+        <br>
+        <form action="/EmployeesApp/filterEmployees" method="post">
+            <label for="model">Filter By: </label>
+            <select id="filter" name="filter">
+                <option value="id"> ID </option>
+                <option value="name"> Name </option>
+                <option value="location"> Location </option>
+                <option value="salary"> Salary </option>
+            </select>
+            <br>
+            <label for="model">Value: </label>
+            <input type="text" id="value" name="value">
+            <input type="submit" value="FILTER">  
+        </form>
     </body>
 </html>

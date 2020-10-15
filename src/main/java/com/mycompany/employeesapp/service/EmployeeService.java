@@ -5,7 +5,6 @@
  */
 package com.mycompany.employeesapp.service;
 
-import com.mycompany.employeesapp.constants.ServiceType;
 import com.mycompany.employeesapp.domain.Employee;
 import com.mycompany.employeesapp.persistency.EmployeeDAO;
 import java.util.List;
@@ -39,7 +38,10 @@ public class EmployeeService {
     {
         dao.editEmployee(id, name, location, salary);
     }
-    
+    public List<Employee> filterEmployees(String filter, String value)
+    {
+        return dao.filterEmployees(filter, value);
+    }
     public void removeEmployee(int id)
     {
         dao.removeEmployee(id);

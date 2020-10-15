@@ -15,13 +15,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class EmployeeDAO extends DAO{
-    
+public class EmployeeDAO extends DAO {
+
     public EmployeeDAO(String userName, String password,
             String serverName, String portNumber, String database) throws ClassNotFoundException {
         super(userName, password, serverName, portNumber, database);
     }
-    
+
     public void addEmployee(Employee e) {
         String query = "INSERT INTO employees (name, location, salary) values (?, ?, ?)";
         try {
@@ -34,9 +34,8 @@ public class EmployeeDAO extends DAO{
             System.out.println("ERROR: " + exc.toString());
         }
     }
-    
-    public List<Employee> getEmployees()
-    {
+
+    public List<Employee> getEmployees() {
         List<Employee> employees = new ArrayList<>();
         Statement statement = null;
         try {
@@ -44,12 +43,10 @@ public class EmployeeDAO extends DAO{
             String query = "SELECT * FROM employees";
             ResultSet rs = statement.executeQuery(query);
 
-                while (rs.next()) 
-                {
-                    employees.add(new Employee(rs.getInt("id"), rs.getString("name"), rs.getInt("location"), rs.getFloat("salary")));
-                }
+            while (rs.next()) {
+                employees.add(new Employee(rs.getInt("id"), rs.getString("name"), rs.getInt("location"), rs.getFloat("salary")));
             }
-         catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         try {
@@ -59,7 +56,7 @@ public class EmployeeDAO extends DAO{
         }
         return employees;
     }
-    
+
     public void editEmployee(int id, String name, int location, float salary) {
         String query = "UPDATE employees SET name = ? , location = ? , salary = ? WHERE id = ?";
         try {
@@ -74,9 +71,29 @@ public class EmployeeDAO extends DAO{
             e.printStackTrace();
         }
     }
-    
-    public void removeEmployee(int id)
-    {
+
+    public List<Employee> filterEmployees(String type, String value) {
+        List<Employee> filteredEmployees = new ArrayList<>();
+
+        for (Employee e : getEmployees()) {
+            String employeeParameter = "";
+
+            switch (type) 
+            {
+                case "id": employeeParameter = String.valueOf(e.getId()); break;
+                case "name": employeeParameter = e.getName(); break;
+                case "location": employeeParameter = e.getLocation(); break;
+                case "salary": employeeParameter = String.valueOf(e.getSalary()); break;
+                default:  break;
+            }
+            if(employeeParameter.toLowerCase().equals(value.toLowerCase()))
+                filteredEmployees.add(e);
+        }
+
+        return filteredEmployees;
+    }
+
+    public void removeEmployee(int id) {
         String query = "DELETE FROM employees WHERE id = ?";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(query);
@@ -87,5 +104,5 @@ public class EmployeeDAO extends DAO{
 
         }
     }
- 
+
 }

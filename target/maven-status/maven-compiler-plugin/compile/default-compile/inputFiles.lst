@@ -2,13 +2,13 @@ C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\co
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\locations\DeleteLocationServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\service\UserService.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\employees\AddEmployeeServlet.java
-C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\constants\ServiceType.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\LocationDAO.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\service\EmployeeService.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\service\LocationService.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\LoginServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\DatabaseConnector.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\utils\Conversor.java
+C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\employees\FilterEmployeesServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\domain\Location.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\servlets\employees\EditEmployeeServlet.java
 C:\Users\dario\OneDrive\Documents\NetBeansProjects\EmployeesApp\src\main\java\com\mycompany\employeesapp\persistency\UserDAO.java

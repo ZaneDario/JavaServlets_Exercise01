@@ -40,6 +40,14 @@
         <url-pattern>/editEmployee</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>FilterEmployeesServlet</servlet-name>
+        <servlet-class>com.mycompany.employeesapp.servlets.employees.FilterEmployeesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FilterEmployeesServlet</servlet-name>
+        <url-pattern>/filterEmployees</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>DeleteEmployeeServlet</servlet-name>
         <servlet-class>com.mycompany.employeesapp.servlets.employees.DeleteEmployeeServlet</servlet-class>
     </servlet>

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.mycompany.employeesapp.service;
-import com.mycompany.employeesapp.constants.ServiceType;
 import com.mycompany.employeesapp.domain.User;
 import com.mycompany.employeesapp.persistency.UserDAO;
 import java.util.logging.Level;

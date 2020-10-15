@@ -1,5 +1,6 @@
 com\mycompany\employeesapp\service\UserService.class
 com\mycompany\employeesapp\servlets\employees\AddEmployeeServlet.class
+com\mycompany\employeesapp\servlets\employees\FilterEmployeesServlet.class
 com\mycompany\employeesapp\servlets\locations\EditLocationServlet.class
 com\mycompany\employeesapp\domain\User.class
 com\mycompany\employeesapp\service\LocationService.class
@@ -10,7 +11,6 @@ com\mycompany\employeesapp\servlets\employees\EditEmployeeServlet.class
 com\mycompany\employeesapp\servlets\employees\ListEmployeesServlet.class
 com\mycompany\employeesapp\servlets\LoginServlet.class
 com\mycompany\employeesapp\utils\Conversor.class
-com\mycompany\employeesapp\constants\ServiceType.class
 com\mycompany\employeesapp\persistency\UserDAO.class
 com\mycompany\employeesapp\servlets\employees\DeleteEmployeeServlet.class
 com\mycompany\employeesapp\persistency\LocationDAO.class
