@@ -1,0 +1,16 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="com.mycompany.employeesapp.domain.User"%>
+<%@ page pageEncoding="UTF-8" %>
+<% HttpSession mySession = request.getSession(false); 
+    User user = (User)mySession.getAttribute("user"); 
+    String name = "null string";
+    if(user != null)
+    {
+        name = user.getUsername();
+    }%>
+    <h2>Hello, <%= name %>! </h2>
+    <text><a href="http://localhost:8080/EmployeesApp/logout">Logout</a></text>
+
+
+                
+
