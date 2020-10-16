@@ -13,24 +13,19 @@
         <div id="header">
             <%@ include file="/WEB-INF/layout/menu.jspf" %>
         </div>
-        <% List<Location> locations = (List<Location>) mySession.getAttribute("locations");
-            if (locations == null) {
-                LocationService service = new LocationService();
-                mySession.setAttribute("locations", service.getLocations());
-                locations = (List<Location>) mySession.getAttribute("locations");
-            }%>
+            
         <form action="/EmployeesApp/addEmployee" method="post">
-            <label for="brand">Name:</label>
+            <label for="brand">Name: </label>
             <input type="text" id="name" name="name">
             <br>
-            <label for="model">Location:</label>
+            <label for="model">Location: </label>
             <select id="location" name="location">
-                <% for (Location loc : locations) {%>
-                <option value="<%=loc.getName()%>"> <%= loc.getName()%> </option>
-                <% }%>    
+                <c:forEach items="${locations}" var="loc">
+                    <option value="${loc.name}"> ${loc.name} </option>
+                </c:forEach>   
             </select>
             <br>
-            <label for="plate">Salary:</label>
+            <label for="plate">Salary: </label>
             <input type="text" id="salary" name="salary">
             <br>
             <input type="submit" value="Add New Employee"> 

@@ -8,8 +8,6 @@ package com.mycompany.employeesapp.servlets;
 import com.mycompany.employeesapp.domain.User;
 import com.mycompany.employeesapp.service.UserService;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,8 +32,6 @@ public class LoginServlet extends HttpServlet{
         }
         else
             response.sendRedirect("http://localhost:8080/EmployeesApp/login");
-        //RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/employees_list.jsp");
-        //rd.forward(request, response);
     }
 
     @Override

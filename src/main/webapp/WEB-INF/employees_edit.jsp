@@ -1,13 +1,5 @@
-<%-- 
-    Document   : employees_edit
-    Created on : 14 oct. 2020, 22:05:24
-    Author     : dario
---%>
 
 <%@page import="java.util.List"%>
-<%@page import="com.mycompany.employeesapp.utils.Conversor"%>
-<%@page import="com.mycompany.employeesapp.domain.Employee"%>
-<%@page import="com.mycompany.employeesapp.domain.Location"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,25 +11,23 @@
         <div id="header">
             <%@ include file="/WEB-INF/layout/menu.jspf" %>
         </div>
-        <% Employee e = (Employee)mySession.getAttribute("employee"); 
-        List<Location> locations = (List<Location>)mySession.getAttribute("locations"); %>
         <h1>Edit the employee info: </h1>
         <form action="/EmployeesApp/editEmployee" method="post">
             <label for="brand">New Name: </label>
-            <input type="text" id="name" name="name" value=<%= e.getName() %>>
+            <input type="text" id="name" name="name" value=${employee.name}>
             <br>
             <label for="model">New Location: </label>
             <select id="location" name="location">
-                <% for(Location loc : locations )
-                    { %>
-                        <option value="<%=loc.getName() %>"
-                                <%if(loc.getId() == e.getLocationId())
-                                { %> selected="selected" <% } %>> <%= loc.getName() %> </option>
-                 <% } %>    
+                <c:forEach items="${locations}" var="loc">
+                    <option value="${loc.name}"
+                            <c:if test="${loc.id == employee.locationId}">
+                                selected="selected"> ${loc.name} </option>
+                    </c:if>
+                </c:forEach>                
             </select>
             <br>
             <label for="model">New Salary: </label>
-            <input type="text" id="salary" name="salary" value=<%= e.getSalary() %>>
+            <input type="text" id="salary" name="salary" value=${employee.salary}>
             <br>
             <input type="submit" value="EDIT"> 
         </form>
