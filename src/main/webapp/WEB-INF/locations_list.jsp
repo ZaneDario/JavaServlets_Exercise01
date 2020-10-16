@@ -37,12 +37,12 @@
                 <td style="text-align:center">${loc.name}</td> 
                 <c:if test="${user != null && user.rol eq 'admin'}">
                     <td style="text-align:center">
-                    <a href="http://localhost:8080/EmployeesApp/editLocation?id=" + ${loc.id}>
+                    <a href="http://localhost:8080/EmployeesApp/editLocation?id=${loc.id}">
                         <img height="25px" width="25px" src="/TecnaraWebApp/images/edit.png" alt="Edit this item from Database.">
                     </a>
                 </td>
                 <td style="text-align:center">
-                    <a href="http://localhost:8080/EmployeesApp/deleteLocation?id=" + ${loc.id}>
+                    <a href="http://localhost:8080/EmployeesApp/deleteLocation?id=${loc.id}">
                         <img height="25px" width="25px" src="/TecnaraWebApp/images/bin.png" alt="Delete this item from Database.">
                     </a>
                 </td>

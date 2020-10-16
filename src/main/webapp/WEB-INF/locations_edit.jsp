@@ -14,7 +14,7 @@
         <h1>Edit the location info: </h1>
         <form action="/EmployeesApp/editLocation" method="post">
             <label for="brand">New Name: </label>
-            <input type="text" id="name" name="name" value=${location.name}>
+            <input type="text" id="name" name="name" value="${location.name}">
             <br>
             <input type="submit" value="EDIT"> 
         </form>

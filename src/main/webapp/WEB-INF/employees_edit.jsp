@@ -14,7 +14,7 @@
         <h1>Edit the employee info: </h1>
         <form action="/EmployeesApp/editEmployee" method="post">
             <label for="brand">New Name: </label>
-            <input type="text" id="name" name="name" value=${employee.name}>
+            <input type="text" id="name" name="name" value="${employee.name}">
             <br>
             <label for="model">New Location: </label>
             <select id="location" name="location">

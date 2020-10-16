@@ -39,12 +39,12 @@
                     <td style="text-align:center">${e.salary}</td>
                     <c:if test="${user != null && user.rol eq 'admin'}">
                         <td style="text-align:center">
-                            <a href="http://localhost:8080/EmployeesApp/editEmployee?id=" + ${e.id}>
+                            <a href="http://localhost:8080/EmployeesApp/editEmployee?id=${e.id}">
                                 <img height="25px" width="25px" src="/TecnaraWebApp/images/edit.png" alt="Edit this item from Database.">
                             </a>
                         </td>
                         <td style="text-align:center">
-                            <a href="http://localhost:8080/EmployeesApp/deleteEmployee?id=" + ${e.id}>
+                            <a href="http://localhost:8080/EmployeesApp/deleteEmployee?id=${e.id}">
                                 <img height="25px" width="25px" src="/TecnaraWebApp/images/bin.png" alt="Delete this item from Database.">
                             </a>
                         </td>  
