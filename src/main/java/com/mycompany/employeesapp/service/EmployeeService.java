@@ -46,4 +46,12 @@ public class EmployeeService {
     {
         dao.removeEmployee(id);
     }
+
+    public List<Employee> arrangeEmployees(String arrange) {
+        return dao.arrangeEmployees(arrange);
+    }
+
+    public Employee getEmployee(int id) {
+       return dao.getEmployee(id);
+    }
 }

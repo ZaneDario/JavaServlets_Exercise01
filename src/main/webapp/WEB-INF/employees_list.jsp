@@ -69,6 +69,17 @@
             <input type="submit" value="FILTER">  
         </form>
         <br>
+        <form action="/EmployeesApp/arrangeEmployees" method="post">
+            <label for="model">Order By: </label>
+            <select id="arrange" name="arrange">
+                <option value="id"> ID </option>
+                <option value="name"> Name </option>
+                <option value="location"> Location </option>
+                <option value="salary"> Salary </option>
+            </select>
+            <input type="submit" value="ARRANGE">  
+        </form>
+        <br>
         <text><a href="http://localhost:8080/EmployeesApp/listEmployees"> Reset   </a></text>
     </body>
 </html>

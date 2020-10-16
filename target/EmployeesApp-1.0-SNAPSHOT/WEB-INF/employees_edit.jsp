@@ -13,7 +13,7 @@
         </div>
         <h1>Edit the employee info: </h1>
         <form action="/EmployeesApp/editEmployee" method="post">
-            <label for="brand">New Name: </label>
+            <label for="model">New Name: </label>
             <input type="text" id="name" name="name" value="${employee.name}">
             <br>
             <label for="model">New Location: </label>
@@ -21,8 +21,8 @@
                 <c:forEach items="${locations}" var="loc">
                     <option value="${loc.name}"
                             <c:if test="${loc.id == employee.locationId}">
-                                selected="selected"> ${loc.name} </option>
-                    </c:if>
+                                selected="selected" </c:if>> ${loc.name}    
+                    </option>
                 </c:forEach>                
             </select>
             <br>

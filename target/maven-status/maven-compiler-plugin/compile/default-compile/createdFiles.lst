@@ -1,5 +1,6 @@
 com\mycompany\employeesapp\service\UserService.class
 com\mycompany\employeesapp\servlets\employees\AddEmployeeServlet.class
+com\mycompany\employeesapp\servlets\employees\ArrangeEmployeesServlet.class
 com\mycompany\employeesapp\servlets\employees\FilterEmployeesServlet.class
 com\mycompany\employeesapp\servlets\locations\EditLocationServlet.class
 com\mycompany\employeesapp\domain\User.class

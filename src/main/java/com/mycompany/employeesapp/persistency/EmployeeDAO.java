@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.employeesapp.persistency;
 
 import com.mycompany.employeesapp.domain.Employee;
@@ -12,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class EmployeeDAO extends DAO {
 
@@ -35,6 +29,24 @@ public class EmployeeDAO extends DAO {
         }
     }
 
+    public Employee getEmployee(int id) {
+        Employee emp = null;
+        Statement statement = null;
+        try {
+            statement = conn.createStatement();
+            String query = "SELECT * FROM employees WHERE id = " + id;
+            ResultSet rs = statement.executeQuery(query);
+
+            if (rs.next()) {
+                emp = new Employee(rs.getInt("id"), rs.getString("name"), rs.getInt("location"), rs.getFloat("salary"));
+            }
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return emp;
+    }
+    
     public List<Employee> getEmployees() {
         List<Employee> employees = new ArrayList<>();
         Statement statement = null;
@@ -46,13 +58,9 @@ public class EmployeeDAO extends DAO {
             while (rs.next()) {
                 employees.add(new Employee(rs.getInt("id"), rs.getString("name"), rs.getInt("location"), rs.getFloat("salary")));
             }
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        try {
-            statement.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return employees;
     }
@@ -92,7 +100,25 @@ public class EmployeeDAO extends DAO {
 
         return filteredEmployees;
     }
+    
+    public List<Employee> arrangeEmployees(String arrange) {
+        List<Employee> employees = new ArrayList<>();
+        Statement statement = null;
+        try {
+            statement = conn.createStatement();
+            String query = "SELECT * FROM employees ORDER BY " + arrange;
+            ResultSet rs = statement.executeQuery(query);
 
+            while (rs.next()) {
+                employees.add(new Employee(rs.getInt("id"), rs.getString("name"), rs.getInt("location"), rs.getFloat("salary")));
+            }
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employees;
+    }
+    
     public void removeEmployee(int id) {
         String query = "DELETE FROM employees WHERE id = ?";
         try {
@@ -104,5 +130,4 @@ public class EmployeeDAO extends DAO {
 
         }
     }
-
 }

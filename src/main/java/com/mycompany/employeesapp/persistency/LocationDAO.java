@@ -29,6 +29,26 @@ public class LocationDAO extends DAO{
         closeConnection();
     }
     
+    public Location getLocation(int id) {
+        Location location = null;
+        Statement statement = null;
+        try {
+            statement = conn.createStatement();
+            String query = "SELECT * FROM locations WHERE id = "+ id;
+            ResultSet rs = statement.executeQuery(query);
+
+                if (rs.next()) 
+                {
+                    location = new Location(rs.getInt("id"), rs.getString("name"));
+                }
+                statement.close();
+            }
+         catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return location;
+    }
+        
     public List<Location> getLocations()
     {
         List<Location> locations = new ArrayList<>();
@@ -79,4 +99,6 @@ public class LocationDAO extends DAO{
 
         }
     }
+
+
 }
