@@ -28,9 +28,17 @@ public class EditEmployeeServlet extends HttpServlet{
         String name = request.getParameter("name");
         String location = request.getParameter("location");
         String salary = request.getParameter("salary");
-        service.editEmployee(id, name, Conversor.parseStringToInt(location), Float.parseFloat(salary));
+        try
+        {
+            float fSalary = Float.parseFloat(salary);
+            service.editEmployee(id, name, Conversor.parseStringToInt(location), fSalary);
+            response.sendRedirect("http://localhost:8080/EmployeesApp/listEmployees");
+        }
+        catch (Exception e)
+        {
+            response.sendRedirect("http://localhost:8080/EmployeesApp/editEmployee?id="+id);
+        }
 
-        response.sendRedirect("http://localhost:8080/EmployeesApp/listEmployees");
     }
 
     @Override

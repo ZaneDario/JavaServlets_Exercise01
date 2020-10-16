@@ -20,8 +20,7 @@
         <h1>Edit the location info: </h1>
         <form action="/EmployeesApp/editLocation" method="post">
             <label for="brand">New Name: </label>
-            <input type="text" id="name" name="name">
-            <label for="brand">  Old Name: <%= loc.getName() %> </label>
+            <input type="text" id="name" name="name" value=<%= loc.getName() %>>
             <br>
             <input type="submit" value="EDIT"> 
         </form>

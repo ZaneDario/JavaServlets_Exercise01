@@ -24,21 +24,20 @@
         <h1>Edit the employee info: </h1>
         <form action="/EmployeesApp/editEmployee" method="post">
             <label for="brand">New Name: </label>
-            <input type="text" id="name" name="name">
-            <label for="brand">  Old Name: <%= e.getName() %> </label>
+            <input type="text" id="name" name="name" value=<%= e.getName() %>>
             <br>
             <label for="model">New Location: </label>
             <select id="location" name="location">
                 <% for(Location loc : locations )
                     { %>
-                        <option value="<%=loc.getName() %>"> <%= loc.getName() %> </option>
+                        <option value="<%=loc.getName() %>"
+                                <%if(loc.getId() == e.getLocationId())
+                                { %> selected="selected" <% } %>> <%= loc.getName() %> </option>
                  <% } %>    
             </select>
-            <label for="brand">  Old Location: <%= e.getLocation() %> </label>
             <br>
             <label for="model">New Salary: </label>
-            <input type="text" id="salary" name="salary">
-            <label for="brand">  Old Salary: <%= e.getSalary() %> </label>
+            <input type="text" id="salary" name="salary" value=<%= e.getSalary() %>>
             <br>
             <input type="submit" value="EDIT"> 
         </form>
